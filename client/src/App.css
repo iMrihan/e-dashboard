@@ -2,7 +2,41 @@
   display: flex;
   gap: 20px;
 }
-
+.nav-ul li a {
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+.nav-ul {
+  padding: 5px;
+  margin: 0;
+  background-color: rgb(10, 71, 96);
+}
+.Footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(8, 81, 110);
+}
+.inputBox {
+  display: block;
+  margin: 25px;
+  padding: 8px;
+  width: 300px;
+  border: 1px solid skyblue;
+}
+.register {
+  margin-left: 30%;
+}
+.signup-button {
+  margin: 10px 25px;
+  padding: 10px;
+  width: 150px;
+  background-color: skyblue;
+  border: 1px solid;
+  cursor: pointer;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
