@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = request("cors");
+const cors = require("cors");
 require("./db/config");
 const User = require("./db/User");
 app.use(express.json());
