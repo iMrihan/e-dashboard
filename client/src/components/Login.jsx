@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   let initial = {
@@ -8,15 +9,32 @@ export default function Login() {
   };
 
   const [loginData, setLoginData] = useState(initial);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(loginData);
+
+    let result = await fetch("http:localhost:3005/login", {
+      method: "Post",
+      body: JSON.stringify(loginData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    result = await result.json();
+
+    console.log(result);
+    if (result.name) {
+      localStorage.setItem("user", JSON.stringify(result));
+      navigate("/");
+    } else {
+      alert("Please enter correct details");
+    }
   };
   return (
     <div className="login">
@@ -24,12 +42,14 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          required
           className="inputBox"
           placeholder="Enter Email"
           name="email"
           onChange={handleChange}
         />
         <input
+          required
           type="password"
           className="inputBox"
           placeholder="Enter Password"
