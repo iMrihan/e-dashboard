@@ -18,7 +18,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let result = await fetch("http:localhost:3005/login", {
+    let result = await fetch("http://localhost:3005/login", {
       method: "Post",
       body: JSON.stringify(loginData),
       headers: {
@@ -27,8 +27,8 @@ export default function Login() {
     });
 
     result = await result.json();
-
     console.log(result);
+
     if (result.name) {
       localStorage.setItem("user", JSON.stringify(result));
       navigate("/");
