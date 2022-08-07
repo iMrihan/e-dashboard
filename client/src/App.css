@@ -1,6 +1,10 @@
 .nav-ul {
   display: flex;
   gap: 20px;
+  padding: 5px;
+
+  margin: 0;
+  background-color: rgb(10, 71, 96);
 }
 .nav-ul > li {
   list-style: none;
@@ -12,12 +16,7 @@
 
   text-decoration: none;
 }
-.nav-ul {
-  padding: 5px;
 
-  margin: 0;
-  background-color: rgb(10, 71, 96);
-}
 .Footer {
   position: absolute;
   text-align: center;
@@ -55,6 +54,23 @@
   background-color: skyblue;
   border: 1px solid;
   cursor: pointer;
+}
+.nav-right {
+  justify-content: end;
+  padding-right: 40px;
+}
+.logo {
+  float: left;
+  width: 45px;
+  border-radius: 50%;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nav {
+  margin: 0;
+  padding: 5px;
+  background-color: rgb(10, 71, 96);
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
