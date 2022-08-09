@@ -31,7 +31,8 @@
   width: 300px;
   border: 1px solid skyblue;
 }
-.register {
+.register,
+.product {
   margin-left: 30%;
 }
 .login {
@@ -47,7 +48,8 @@
   border: 1px solid;
   cursor: pointer;
 }
-.login-button {
+.login-button,
+.product-button {
   margin: 10px 25px;
   padding: 10px;
   width: 150px;
@@ -55,6 +57,7 @@
   border: 1px solid;
   cursor: pointer;
 }
+
 .nav-right {
   justify-content: end;
   padding-right: 40px;
