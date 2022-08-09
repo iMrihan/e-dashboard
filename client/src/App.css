@@ -86,7 +86,20 @@
   margin-left: 25px;
   display: block;
 }
-
+.products-list {
+  text-align: center;
+}
+.products-list ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+}
+.products-list > ul > li {
+  border: 1px solid skyblue;
+  padding: 5px;
+  width: 150px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
