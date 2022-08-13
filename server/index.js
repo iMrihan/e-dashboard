@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 require("./db/config");
+let port = 3005;
 const User = require("./db/User");
 const Product = require("./db/Product");
 app.use(express.json());
@@ -84,6 +85,6 @@ app.get("/search/:key", async (req, res) => {
   res.send(result);
 });
 
-app.listen(3005, () => {
-  console.log("app is running");
+app.listen(port, () => {
+  console.log(`app is running on port no ${port}`);
 });
